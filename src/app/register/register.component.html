@@ -1,0 +1,262 @@
+<div class="card">
+  <!-- الخطوة الأولى - معلومات المستخدم الأساسية -->
+  <div *ngIf="isProfileStep">
+    <div class="card-header">
+      <h1 class="card-title" i18n="@@login.register">تسجيل حساب جديد</h1>
+    </div>
+    <div class="card-content">
+      
+
+      <form [formGroup]="registerForm">
+        <div class="profile-upload">
+          <div class="profile-circle">
+            <i class="fas fa-user"></i>
+            <label class="camera-icon" for="profileImage">
+              <i class="fas fa-camera"></i>
+            </label>
+            <input 
+              type="file" 
+              id="profileImage" 
+              hidden 
+              accept="image/*"
+              (change)="onFileSelected($event)"
+            >
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName" i18n="@@register.firstName">الاسم الأول</label>
+            <input 
+              type="text" 
+              id="firstName" 
+              class="input" 
+              formControlName="firstName"
+            >
+            <div 
+              class="error" 
+              *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched"
+              i18n="@@register.firstNameRequired"
+            >
+              الاسم الأول مطلوب
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lastName" i18n="@@register.lastName">الاسم الأخير</label>
+            <input 
+              type="text" 
+              id="lastName" 
+              class="input" 
+              formControlName="lastName"
+            >
+            <div 
+              class="error" 
+              *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched"
+              i18n="@@register.lastNameRequired"
+            >
+              الاسم الأخير مطلوب
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" i18n="@@register.email">البريد الإلكتروني</label>
+          <input 
+            type="email" 
+            id="email" 
+            class="input" 
+            formControlName="email"
+          >
+          <div 
+            class="error" 
+            *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched"
+            i18n="@@register.emailInvalid"
+          >
+            يرجى إدخال بريد إلكتروني صحيح
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password" i18n="@@login.password">كلمة المرور</label>
+          <input 
+            type="password" 
+            id="password" 
+            class="input" 
+            formControlName="password"
+          >
+          <div 
+            class="error" 
+            *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched"
+            i18n="@@register.passwordInvalid"
+          >
+            كلمة المرور يجب أن تكون على الأقل 8 أحرف
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword" i18n="@@register.confirmPassword">تأكيد كلمة المرور</label>
+          <input 
+            type="password" 
+            id="confirmPassword" 
+            class="input" 
+            formControlName="confirmPassword"
+          >
+          <div 
+            class="error" 
+            *ngIf="registerForm.get('confirmPassword')?.value !== registerForm.get('password')?.value && registerForm.get('confirmPassword')?.touched"
+            i18n="@@register.passwordMismatch"
+          >
+            كلمات المرور غير متطابقة
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone" i18n="@@register.phone">رقم الهاتف</label>
+          <input 
+            type="tel" 
+            id="phone" 
+            class="input" 
+            placeholder="+966xxxxxxxxx" 
+            formControlName="phone"
+          >
+          <div 
+            class="error" 
+            *ngIf="registerForm.get('phone')?.invalid && registerForm.get('phone')?.touched"
+            i18n="@@register.phoneRequired"
+          >
+            رقم الهاتف مطلوب
+          </div>
+        </div>
+
+        <button 
+          type="button" 
+          class="btn btn-submit" 
+          (click)="continueToNextStep()"
+          [disabled]="!validateFirstStep()"
+          i18n="@@register.continue"
+        >
+          متابعة
+        </button>
+      </form>
+    </div>
+    <div class="card-footer">
+      <p>
+        <span i18n="@@register.haveAccount">لديك حساب بالفعل؟</span>
+        <a href="javascript:void(0)" class="login-link" (click)="navigateToLogin()" i18n="@@register.login">تسجيل الدخول</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- الخطوة الثانية - معلومات إضافية -->
+  <div *ngIf="!isProfileStep">
+    <div class="card-header">
+      <h1 class="card-title" i18n="@@register.finalStep">خطوة واحدة أخيرة!</h1>
+      <p class="card-subtitle" i18n="@@register.customizeExperience">ساعدنا في تخصيص تجربتك</p>
+    </div>
+    <div class="card-content">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label i18n="@@register.gender">الجنس</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input 
+                type="radio" 
+                name="gender" 
+                value="male" 
+                class="radio-input" 
+                formControlName="gender"
+              >
+              <span i18n="@@register.male">ذكر</span>
+            </label>
+            <label class="radio-label">
+              <input 
+                type="radio" 
+                name="gender" 
+                value="female" 
+                class="radio-input"
+                formControlName="gender"
+              >
+              <span i18n="@@register.female">أنثى</span>
+            </label>
+          </div>
+          <div 
+            class="error" 
+            *ngIf="registerForm.get('gender')?.invalid && registerForm.get('gender')?.touched"
+            i18n="@@register.genderRequired"
+          >
+            يرجى اختيار الجنس
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="country" i18n="@@register.country">الدولة</label>
+          <select 
+            id="country" 
+            class="select" 
+            formControlName="country"
+          >
+            <option value="" i18n="@@register.selectCountry">اختر الدولة</option>
+            <option value="SA">المملكة العربية السعودية</option>
+            <option value="AE">الإمارات العربية المتحدة</option>
+            <option value="KW">الكويت</option>
+            <option value="BH">البحرين</option>
+            <option value="QA">قطر</option>
+            <option value="OM">عمان</option>
+            <option value="EG">مصر</option>
+          </select>
+          <div 
+            class="error" 
+            *ngIf="registerForm.get('country')?.invalid && registerForm.get('country')?.touched"
+            i18n="@@register.countryRequired"
+          >
+            يرجى اختيار الدولة
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label i18n="@@register.interests">الاهتمامات</label>
+          <div class="tags-container">
+            <div class="tag" *ngFor="let tag of registerForm.get('interests')?.value">
+              {{ tag }}
+              <span class="tag-remove" (click)="removeTag(tag)">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+          <div class="tags-input">
+            <input 
+              type="text" 
+              class="input" 
+              id="tagInput" 
+              placeholder="أضف اهتماماتك (مثال: رياضيات، برمجة)"
+              (input)="filterTags($event)"
+              i18n-placeholder="@@register.interestsPlaceholder"
+            >
+          </div>
+          <div class="tags-suggestions" *ngIf="showSuggestions">
+            <div 
+              class="suggestion-item" 
+              *ngFor="let tag of filteredTags"
+              (click)="addTag(tag)"
+            >
+              {{ tag }}
+            </div>
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          class="btn" 
+          [disabled]="!registerForm.valid"
+          i18n="@@register.finish"
+        >
+          إنهاء
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{
+  "routes": {
+    "/ibdaaexams": {},
+    "/ibdaaexams/login": {},
+    "/ibdaaexams/register": {}
+  }
+}

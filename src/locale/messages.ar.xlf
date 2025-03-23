@@ -1,0 +1,292 @@
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <!-- النصوص من common.json -->
+      <trans-unit id="app.name" datatype="html">
+        <source>App Name</source>
+        <target>إبداع التربية</target>
+      </trans-unit>
+      <trans-unit id="app.slogan" datatype="html">
+        <source>App Slogan</source>
+        <target>منصة تعليمية متكاملة</target>
+      </trans-unit>
+      <trans-unit id="nav.home" datatype="html">
+        <source>Home</source>
+        <target>الرئيسية</target>
+      </trans-unit>
+      <trans-unit id="nav.exams" datatype="html">
+        <source>Exams</source>
+        <target>الاختبارات</target>
+      </trans-unit>
+      <trans-unit id="nav.cards" datatype="html">
+        <source>Cards</source>
+        <target>البطاقات التعليمية</target>
+      </trans-unit>
+      <trans-unit id="nav.myAccount" datatype="html">
+        <source>My Account</source>
+        <target>حسابي</target>
+      </trans-unit>
+      <trans-unit id="nav.notifications" datatype="html">
+        <source>Notifications</source>
+        <target>الإشعارات</target>
+      </trans-unit>
+      <trans-unit id="nav.settings" datatype="html">
+        <source>Settings</source>
+        <target>الإعدادات</target>
+      </trans-unit>
+
+      <!-- النصوص من auth.json -->
+      <trans-unit id="login.username" datatype="html">
+  <source>Email or Phone Number</source>
+  <target>البريد الإلكتروني أو رقم الهاتف</target>
+</trans-unit>
+
+<trans-unit id="login.username.placeholder" datatype="html">
+  <source>example@domain.com or +xxxxxxxxxxx</source>
+  <target>example@domain.com أو +966xxxxxxxxx</target>
+</trans-unit>
+
+<trans-unit id="login.username.required" datatype="html">
+  <source>Please enter your email or phone number</source>
+  <target>يرجى إدخال البريد الإلكتروني أو رقم الهاتف</target>
+</trans-unit>
+
+<trans-unit id="login.password" datatype="html">
+  <source>Password</source>
+  <target>كلمة المرور</target>
+</trans-unit>
+
+<trans-unit id="login.password.required" datatype="html">
+  <source>Please enter your password</source>
+  <target>يرجى إدخال كلمة المرور</target>
+</trans-unit>
+
+<trans-unit id="login.remember" datatype="html">
+  <source>Remember me</source>
+  <target>تذكرني</target>
+</trans-unit>
+
+<trans-unit id="login.signin" datatype="html">
+  <source>Sign In</source>
+  <target>تسجيل الدخول</target>
+</trans-unit>
+
+<trans-unit id="login.register" datatype="html">
+  <source>Create New Account</source>
+  <target>إنشاء حساب جديد</target>
+</trans-unit>
+
+<trans-unit id="login.or" datatype="html">
+  <source>or</source>
+  <target>أو</target>
+</trans-unit>
+
+<trans-unit id="login.google" datatype="html">
+  <source>Sign in with Google</source>
+  <target>تسجيل الدخول باستخدام Google</target>
+</trans-unit>
+
+<trans-unit id="login.facebook" datatype="html">
+  <source>Sign in with Facebook</source>
+  <target>تسجيل الدخول باستخدام Facebook</target>
+</trans-unit>
+<trans-unit id="register.firstName" datatype="html">
+  <source>First Name</source>
+  <target>الاسم الأول</target>
+</trans-unit>
+
+<trans-unit id="register.lastName" datatype="html">
+  <source>Last Name</source>
+  <target>الاسم الأخير</target>
+</trans-unit>
+
+<trans-unit id="register.email" datatype="html">
+  <source>Email</source>
+  <target>البريد الإلكتروني</target>
+</trans-unit>
+
+<trans-unit id="register.confirmPassword" datatype="html">
+  <source>Confirm Password</source>
+  <target>تأكيد كلمة المرور</target>
+</trans-unit>
+
+<trans-unit id="register.phone" datatype="html">
+  <source>Phone Number</source>
+  <target>رقم الهاتف</target>
+</trans-unit>
+
+<trans-unit id="register.continue" datatype="html">
+  <source>Continue</source>
+  <target>متابعة</target>
+</trans-unit>
+
+<trans-unit id="register.haveAccount" datatype="html">
+  <source>Already have an account?</source>
+  <target>لديك حساب بالفعل؟</target>
+</trans-unit>
+
+<trans-unit id="register.login" datatype="html">
+  <source>Login</source>
+  <target>تسجيل الدخول</target>
+</trans-unit>
+
+<trans-unit id="register.finalStep" datatype="html">
+  <source>One Final Step!</source>
+  <target>خطوة واحدة أخيرة!</target>
+</trans-unit>
+
+<trans-unit id="register.customizeExperience" datatype="html">
+  <source>Help us customize your experience</source>
+  <target>ساعدنا في تخصيص تجربتك</target>
+</trans-unit>
+
+<trans-unit id="register.gender" datatype="html">
+  <source>Gender</source>
+  <target>الجنس</target>
+</trans-unit>
+
+<trans-unit id="register.male" datatype="html">
+  <source>Male</source>
+  <target>ذكر</target>
+</trans-unit>
+
+<trans-unit id="register.female" datatype="html">
+  <source>Female</source>
+  <target>أنثى</target>
+</trans-unit>
+
+<trans-unit id="register.country" datatype="html">
+  <source>Country</source>
+  <target>الدولة</target>
+</trans-unit>
+
+<trans-unit id="register.selectCountry" datatype="html">
+  <source>Select Country</source>
+  <target>اختر الدولة</target>
+</trans-unit>
+
+<trans-unit id="register.interests" datatype="html">
+  <source>Interests</source>
+  <target>الاهتمامات</target>
+</trans-unit>
+
+<trans-unit id="register.interestsPlaceholder" datatype="html">
+  <source>Add your interests (e.g. mathematics, programming)</source>
+  <target>أضف اهتماماتك (مثال: رياضيات، برمجة)</target>
+</trans-unit>
+
+<trans-unit id="register.finish" datatype="html">
+  <source>Finish</source>
+  <target>إنهاء</target>
+</trans-unit>
+
+<trans-unit id="register.firstNameRequired" datatype="html">
+  <source>First name is required</source>
+  <target>الاسم الأول مطلوب</target>
+</trans-unit>
+
+<trans-unit id="register.lastNameRequired" datatype="html">
+  <source>Last name is required</source>
+  <target>الاسم الأخير مطلوب</target>
+</trans-unit>
+
+<trans-unit id="register.emailInvalid" datatype="html">
+  <source>Please enter a valid email</source>
+  <target>يرجى إدخال بريد إلكتروني صحيح</target>
+</trans-unit>
+
+<trans-unit id="register.passwordInvalid" datatype="html">
+  <source>Password must be at least 8 characters</source>
+  <target>كلمة المرور يجب أن تكون على الأقل 8 أحرف</target>
+</trans-unit>
+
+<trans-unit id="register.passwordMismatch" datatype="html">
+  <source>Passwords do not match</source>
+  <target>كلمات المرور غير متطابقة</target>
+</trans-unit>
+
+<trans-unit id="register.phoneRequired" datatype="html">
+  <source>Phone number is required</source>
+  <target>رقم الهاتف مطلوب</target>
+</trans-unit>
+
+<trans-unit id="register.genderRequired" datatype="html">
+  <source>Please select a gender</source>
+  <target>يرجى اختيار الجنس</target>
+</trans-unit>
+
+<trans-unit id="register.countryRequired" datatype="html">
+  <source>Please select a country</source>
+  <target>يرجى اختيار الدولة</target>
+</trans-unit>
+
+      <!-- النصوص من exams.json -->
+      <trans-unit id="exams.title" datatype="html">
+        <source>Exams Title</source>
+        <target>الاختبارات</target>
+      </trans-unit>
+      <trans-unit id="exams.createExam" datatype="html">
+        <source>Create Exam</source>
+        <target>إنشاء اختبار جديد</target>
+      </trans-unit>
+      <trans-unit id="exams.examDetails" datatype="html">
+        <source>Exam Details</source>
+        <target>تفاصيل الاختبار</target>
+      </trans-unit>
+      <trans-unit id="exams.examSettings" datatype="html">
+        <source>Exam Settings</source>
+        <target>إعدادات الاختبار</target>
+      </trans-unit>
+      <trans-unit id="exams.examQuestions" datatype="html">
+        <source>Exam Questions</source>
+        <target>أسئلة الاختبار</target>
+      </trans-unit>
+      <trans-unit id="exams.examResults" datatype="html">
+        <source>Exam Results</source>
+        <target>نتائج الاختبار</target>
+      </trans-unit>
+      <trans-unit id="exams.preview" datatype="html">
+        <source>Preview</source>
+        <target>معاينة الاختبار</target>
+      </trans-unit>
+      <trans-unit id="exams.publish" datatype="html">
+        <source>Publish</source>
+        <target>نشر الاختبار</target>
+      </trans-unit>
+
+      <!-- النصوص من cards.json -->
+      <trans-unit id="cards.title" datatype="html">
+        <source>Cards Title</source>
+        <target>البطاقات التعليمية</target>
+      </trans-unit>
+      <trans-unit id="cards.createCard" datatype="html">
+        <source>Create Card</source>
+        <target>إنشاء بطاقة تعليمية جديدة</target>
+      </trans-unit>
+      <trans-unit id="cards.cardContent" datatype="html">
+        <source>Card Content</source>
+        <target>محتوى البطاقة</target>
+      </trans-unit>
+      <trans-unit id="cards.attachments" datatype="html">
+        <source>Attachments</source>
+        <target>المرفقات</target>
+      </trans-unit>
+      <trans-unit id="cards.addAttachment" datatype="html">
+        <source>Add Attachment</source>
+        <target>إضافة مرفق</target>
+      </trans-unit>
+      <trans-unit id="cards.tags" datatype="html">
+        <source>Tags</source>
+        <target>التصنيفات</target>
+      </trans-unit>
+      <trans-unit id="cards.addTag" datatype="html">
+        <source>Add Tag</source>
+        <target>إضافة تصنيف</target>
+      </trans-unit>
+      <trans-unit id="cards.quizCard" datatype="html">
+        <source>Quiz Card</source>
+        <target>اختبار البطاقة</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
